@@ -1,9 +1,39 @@
 import numpy as np
 import scipy as sp
 
-z = [-25, -15]
-X = [[2, 2], [3, 1]]
-b = [240, 140]
+
+print("                 Welcome to Simplex Algorithm                 ")
+print("\n \n")
+print("                    Enter Values of MaxZ                      ")
+nbr_var = int(input("                     How many variable? \n"))
+
+z = []
+for i in range(nbr_var):
+    print("X",i+1," : ", end ="")
+    z_var = int(input())    
+    z.append(-z_var)
+
+nbr_eq = int(input("                     How many equation? \n "))
+
+X = []
+b = []
+for j in range(nbr_eq):
+    print("Coef of equation",j+1," : ")
+    xi = []
+    x11 = int(input())
+    x22 = int(input())
+    b_input = int(input("B = "))
+    xi.append(x11)
+    xi.append(x22)
+    X.append(xi)
+    b.append(b_input)
+
+#z = [-400, -500] # Max Z
+#X = [[4, 6], [8, 3]] 
+#b = [60, 240] # <b
+print(z)
+print(X)
+print(b)
 
 R = (0, None)
 T = (0, None)
